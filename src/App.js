@@ -1,9 +1,15 @@
 import Posts from "./components/Posts";
+
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
-function App() {
+
+
+const App = () => {
+
+
   return (
    <>
+  
   <BrowserRouter>
     <Routes>
     <Route exact path="/"  element={ <Posts   key="posts" category="posts"/>} />
@@ -11,7 +17,9 @@ function App() {
     <Route exact path="/comments"  element={ <Posts key="comments" category="comments" />} />
     <Route exact path="/albums"  element={ <Posts   key="albums" category="albums" />} />
     <Route exact path="/users"  element={ <Posts   key="users" category="users" />} />
+    <Route exact path="/users"  element={ <Posts   key="todos" category="todos" />} />
     </Routes>
+   
   </BrowserRouter>
   
    </>
