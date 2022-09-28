@@ -6,7 +6,7 @@ import Spinner from "../components/Spinner";
 const Posts = (props) => {
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [postsPerPage] = useState(5);
+    const [postsPerPage] = useState(10);
 
     const [postsRecord, setpostsRecord] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -100,11 +100,11 @@ const Posts = (props) => {
         })}
 
 {/* pagination start */}
-        <nav className='d-flex justify-content-center mt-4'>
-      <ul className="pagination ">
+        <nav className='d-flex justify-content-center mt-4 ' >
+      <ul className="pagination " style={{overflowX:'auto'}}>
         {pageNumbers.map(number =>{
             return(<li key={number} className="page-item">
-                <a onClick={() => paginate(number)} href="!#" className='page-link'> 
+                <a onClick={() => paginate (number)} href="!#" className='page-link'> 
                 {number}
                 </a>
             </li>)
